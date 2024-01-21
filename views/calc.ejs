@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/calc/style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="center">
+            <div>
+                <div id="resultbox">
+                    <h1 id="result">{{result}}</h1>
+                </div>
+                <div id="buttons">
+                    <div class="row">
+                        <button v-on:click="addChar($event)">(</button>
+                        <button v-on:click="addChar($event)">)</button>
+                        <button v-on:click="clear">C</button>
+                        <button v-on:click="backspace" class="mainbtn">&lt;</button>
+                    </div>
+                    <div class="row">
+                        <button v-on:click="addChar($event)">7</button>
+                        <button v-on:click="addChar($event)">8</button>
+                        <button v-on:click="addChar($event)">9</button>
+                        <button v-on:click="addChar($event)" class="mainbtn">&#247;</button>
+                    </div>
+                    <div class="row">
+                        <button v-on:click="addChar($event)">4</button>
+                        <button v-on:click="addChar($event)">5</button>
+                        <button v-on:click="addChar($event)">6</button>
+                        <button v-on:click="addChar($event)" class="mainbtn">&#215;</button>
+                    </div>
+                    <div class="row">
+                        <button v-on:click="addChar($event)">1</button>
+                        <button v-on:click="addChar($event)">2</button>
+                        <button v-on:click="addChar($event)">3</button>
+                        <button v-on:click="addChar($event)" class="mainbtn">-</button>
+                    </div>
+                    <div class="row">
+                        <button>.</button>
+                        <button v-on:click="addChar($event)">0</button>
+                        <button class="mainbtn" v-on:click="count">=</button>
+                        <button v-on:click="addChar($event)" class="mainbtn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/calc/script.js"></script>
+</body>
+</html>
