@@ -10,6 +10,6 @@ func SetupRoutes(r *gin.Engine) {
 	})
 
 	r.GET("/calc", func(ctx *gin.Context) {
-		ctx.File("public/html/calc.html")
+		ctx.File("public/views/calc.html")
 	})
 }
