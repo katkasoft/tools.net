@@ -12,4 +12,7 @@ func SetupRoutes(r *gin.Engine) {
 	r.GET("/calc", func(ctx *gin.Context) {
 		ctx.File("public/views/calc.html")
 	})
+	r.GET("/clock", func(ctx *gin.Context) {
+		ctx.File("public/views/clock/clock.html")
+	})
 }
