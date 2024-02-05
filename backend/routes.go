@@ -15,7 +15,4 @@ func SetupRoutes(r *gin.Engine) {
 	r.GET("/clock", func(ctx *gin.Context) {
 		ctx.File("public/views/clock/clock.html")
 	})
-	r.GET("/stopwatch", func(ctx *gin.Context) {
-		ctx.File("public/views/clock/stopwatch.html")
-	})
 }
